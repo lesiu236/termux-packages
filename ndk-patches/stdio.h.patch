@@ -1,6 +1,6 @@
 --- ./usr/include/stdio.h.orig	2021-08-16 11:48:44.308954400 +0200
 +++ ./usr/include/stdio.h	2021-08-16 11:50:00.438924014 +0200
-@@ -44,11 +44,12 @@
+@@ -44,6 +44,9 @@
  #include <stdarg.h>
  #include <stddef.h>
  
@@ -9,12 +9,7 @@
 +
  #include <bits/seek_constants.h>
  
--#if __ANDROID_API__ < 24
- #include <bits/struct_file.h>
--#endif
- 
- __BEGIN_DECLS
- 
+ #if __ANDROID_API__ < 24
 @@ -165,7 +166,7 @@
      __printflike(2, 0) __warnattr_strict("vsprintf is often misused; please use vsnprintf");
  char* tmpnam(char* __s)
