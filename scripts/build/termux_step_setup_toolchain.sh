@@ -10,7 +10,7 @@ termux_step_setup_toolchain() {
 	export CXX=$TERMUX_HOST_PLATFORM-clang++
 	export AR=llvm-ar
 	export CPP=$TERMUX_HOST_PLATFORM-cpp
-	export LD=lld
+	export LD=ld.lld
 	export OBJCOPY=llvm-objcopy
 	export OBJDUMP=llvm-objdump
 	export RANLIB=llvm-ranlib
