@@ -7,7 +7,7 @@ TERMUX_PKG_SRCURL=https://static.rust-lang.org/dist/rustc-$TERMUX_PKG_VERSION-sr
 TERMUX_PKG_SHA256=a2934f85f76a35a3796c0fefd31e91f5b6dd8377cd8c3769c1c10e7ce7a495f4
 TERMUX_PKG_DEPENDS="libc++, clang, openssl, lld, zlib, libllvm"
 TERMUX_PKG_RM_AFTER_INSTALL="bin/llvm-dwp"
-#TERMUX_PKG_BLACKLISTED_ARCHES="i686,aarch64,x86_64"
+TERMUX_PKG_BLACKLISTED_ARCHES="i686,x86_64"
 
 termux_step_configure() {
 	termux_setup_cmake
